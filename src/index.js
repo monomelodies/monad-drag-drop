@@ -4,13 +4,13 @@
 let draggedElement;
 let target;
 
-export default () => {
-    return {
+export default angular.module('monad.drag-drop', ['monad.cms'])
+    .directive('monadDragDrop', () => ({
         restrict: 'A',
-        scope: {item: '=moDragDrop', list: '=', track: '@', position: '@'},
+        scope: {item: '=monadDragDrop', list: '=', track: '@', position: '@'},
         link
-    };
-};
+    })
+    .name;
 
 function prevent(event) {
     if (event.preventDefault) {

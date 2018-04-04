@@ -9,7 +9,7 @@ export default angular.module('monad.drag-drop', ['monad.cms'])
         restrict: 'A',
         scope: {item: '=monadDragDrop', list: '=', track: '@', position: '@'},
         link
-    })
+    }))
     .name;
 
 function prevent(event) {
